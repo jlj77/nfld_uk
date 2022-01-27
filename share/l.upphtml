@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang=${LANG%%_*}>
+
+<head>
+
+<title>nfld >|< UK</title>
+
+<meta charset=${LANG##*.}>
+<meta name=viewport content='width=device-width, initial-scale=1'>
+<link rel=icon href='./favicon.ico' type='image/x-icon'>
+<link rel=stylesheet href='./sakura/css/normalize.css' type='text/css'>
+<link rel=stylesheet href='./sakura/css/sakura-vader.css' type='text/css'>
+<link rel=stylesheet
+href=s.css?$(lmt -f '%Y-%m-%dT%H:%M:%SZ' s.css | cut -d' ' -f1)>
+
+</head>
+
+<body>
+
+#!
+pp "$1"
+#!
+
+</body>
+
+</html>

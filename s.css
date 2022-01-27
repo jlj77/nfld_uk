@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Tandy1K-I 225L';
+  src: url('Web437_Tandy1K-I_225L.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, h1, h2 {
+  font-family: 'Tandy1K-I 225L';
+}
+
+# Indent new paragraphs, following an initial one
+p+p { 
+  text-indent: 1.5rem;
+}

@@ -1,0 +1,155 @@
+<h1>Welcome to nfld.uk!</h1>
+<p>Hi! Welcome! I'm JJ, an expat Canadian living in the UK. I enjoy
+tinkering, particularly with Linux; as part of that, I host some
+services for personal use, which I'm also happy to offer to friends
+and polite strangers. These include:</p>
+<ul>
+<li>Social:
+  <ul>
+  <li><a href=https://twt.nfld.uk>twt.nfld.uk</a>:
+  <a href=https://yarn.social>Yarn.social</a>: social media, <em>on
+  your terms</em></li>
+  <li><a href=https://social.nfld.uk>social.nfld.uk</a>: Pleroma /
+  Fediverse</li>
+  <li><a href=https://matrix.nfld.uk/register>matrix.nfld.uk</a>:
+  Synapse / token-mediated registration - drop by <a
+  href=https://matrix.to/#/#lobby:nfld.uk>the lobby</a> and say
+  Hi! if you already have a Matrix account - or, join, as a guest
+  or IRC fan, from the #nfld channel on <a
+  href=ircs://irc.ircnow.org>irc.ircnow.org</a> - I run a
+  Matrix<->IRC bridge for most of my rooms</li>
+  <li><a href=https://pad.nfld.uk>pad.nfld.uk</a>: <a
+  href=https://etherpad.org>Etherpad</a> - collaborate on
+  documents with your friends, including real-time chat</li>
+  <li><a href=https://manual.calibre-ebook.com/server.html>Calibre
+  server</a>: for <a
+  href=https://pad.nfld.uk/p/bookclub_master>our book club</a>
+  - drop by and say Hi!</li>
+  <li><a href=https://call.nfld.uk>call.nfld.uk</a>: <a
+  href=https://peercalls.com>Peer Calls</a></li>
+  </ul></li>
+<li>Syndication:
+  <ul>
+  <li><a href=https://rss.nfld.uk>rss.nfld.uk</a>:
+  <a href=https://miniflux.app>Miniflux</a></li>
+  <li><a href=https://rsshub.nfld.uk>rsshub.nfld.uk</a>:
+  structured feed generator</li>
+  <li><a href=https://rss-proxy.nfld.uk>rss-proxy.nfld.uk</a>:
+  simple feed generator</li>
+  </ul></li>
+<li>Other:
+  <ul>
+  <li><a href=https://fmd.nfld.uk>fmd.nfld.uk</a>: <a
+  href=https://gitlab.com/Nulide/findmydeviceserver>FMDServer</a>, for
+  use with the <a
+  href=https://f-droid.org/en/packages/de.nulide.findmydevice/>FindMyDevice
+  app on F-Droid</a></li>
+  <li><a href=https://msg.nfld.uk>msg.nfld.uk</a>: <a
+  href=https://gotify.net>Gotify</a> server</li>
+  <li>A <a
+  href=https://community.torproject.org/relay/types-of-relays>Tor
+  bridge</a></li>
+  <li><a
+  href=https://github.com/dani-garcia/vaultwarden>Vaultwarden</a></li>
+  </ul></li>
+</ul>
+<p>Some of these services are simply open; others require an account or
+token / API key. Please don't hesitate to <a href=#contact>reach
+out</a>, in the latter case. Also, I add more services regularly, and
+am happy to take suggestions as well.</p>
+<p>If you've wondered whether you too might like system administration,
+I'd highly recommend trying it out, <em>for free</em>, on
+<a href=https://linuxupskillchallenge.com>Linux</a> and
+<a href='https://wiki.ircnow.org/?n=Ircnow.Pioneer'>OpenBSD</a>; as
+well as joining <a href=https://tildeverse.org>the tildeverse</a>.</p>
+<h2>Cool stuff I support, with funds / time</h2>
+<ul>
+<li><a href=https://readup.com/>Readup</a>: the world's best reading
+app</li>
+<li><a href=https://standardebooks.org>Standard Ebooks</a>: free and
+liberated ebooks, carefully produced for the true book lover.</li>
+<li><a href=https://ircnow.org>IRCNow</a>: the Users' Network: of the
+users, by the users, for the users - join us!</li>
+<li><a href=https://lichess.org>Lichess</a>
+(<a href=https://lichess.org/@/jlj7>let's play!</a>)</li>
+<li><a href=https://tandemonium.fun>Tandemonium</a>: tandem cycling for
+the visually impaired</li>
+<li><a href=https://lwn.net>LWN</a>: news from the source</li>
+<li><a href=https://mkws.sh>mkws</a>: a simple static site generator</li>
+<li><a href=https://rhiannonbeaubien.com>Alone Among Spies</a>: an
+exciting read! Particularly if you enjoy spy fiction!</li>
+<li><a href=https://www.wheezywaiter.com>Wheezy Waiter</a> (and
+<a href=https://www.patreon.com/thegoodstuff>The Good Stuff</a>)</li>
+</ul>
+<h2>Other neat stuff</h2>
+<ul>
+<li><a href=https://int10h.org/oldschool-pc-fonts/fontlist>'Oldschool'
+PC fonts</a></li>
+<li><a href=http://www.palemoon.org>Pale Moon</a>: a browser completely
+built from its own, independently-developed source, focused on
+efficiency and customisation</li>
+<li><a href=https://www.edrlab.org/software/thorium-reader/>EDRLab's
+Thorium Reader</a>: modern, EPUB 3 compatible reading software with
+excellent screen reader support</li>
+<li><a href=https://delta.chat>Delta Chat</a>: chat over e-mail</li>
+<li><a href=https://getaether.net>Aether</a>: peer-to-peer, ephemeral,
+public - open source, self-governing communities with
+auditable moderation and mod elections</li>
+<li><a href=https://librewolf-community.gitlab.io>LibreWolf</a></li>
+<li><a href=https://sketchplanations.com>Sketchplanations</a></li>
+<li>Public funds? <a href=https://publiccode.eu>Public code</a>!</li>
+<li><a href=https://search.twtxt.net>Yarns</a>: a
+<a href=https://yarn.social>Yarn.social</a> search engine</li>
+</ul>
+<h2>Reminder</h2>
+<p><a href=https://linuxupskillchallenge.org>The Linux Upskill
+Challenge</a> is a <em>free</em> Linux sysadmin course</a>! And
+IRCNow offers <a href='https://wiki.ircnow.org/?n=Ircnow.Pioneer'>a
+free four-week OpenBSD sysadmin course</a> as well! Have a go!</p>
+<hr>
+<h2 id=contact>Contact info</h2>
+<address><a href=./E94407F8.asc>E94407F8.asc</a> - my PGP key</address>
+<address>@jlj@social.nfld.uk - Fediverse</address>
+<address>@jlj:nfld.uk - Matrix</address>
+<address>jlj at ctrl-c dot club - alt e-mail</address>
+<a href=https://blog.nfld.uk>My blog</a><br>
+<br>
+Join <a href=https://matrix.to/#/#support:nfld.uk>#support:nfld.uk</a>
+for service status, and support. (Part of the Matrix 'space'
+<a href=https://matrix.to/#/#myspace:nfld.uk>#myspace:nfld.uk</a>.)
+<hr>
+<div align=center>
+A proud member of the webring of fedizens<br>
+<a href=https://fediring.net/previous?host=nfld.uk>←</a>
+<a href=https://fediring.net/>Fediring</a>
+<a href=https://fediring.net/next?host=nfld.uk>→</a>
+<hr>
+<h2>Homage / Silence</h2>
+<p><a
+href='https://donations.helpforcharities.com/unbdonation/?dept_id=memmarkcampbell'>The
+Mark A. Campbell Bursary</a> will be awarded to <a href=https://unb.ca>UNB</a>
+Computer Science students from New Brunswick or Prince Edward Island, in memory of
+our friend.</p>
+RIP Mark Andrew Campbell<br>
+1975 - 2019
+<hr>
+RIP Sarah Rosemary Everard<br>
+1987 - 2021
+<hr>
+Aaron dead.<br>
+World wanderers, we have lost a wise elder.<br>
+Hackers for right, we are one down.<br>
+Parents all, we have lost a child.<br>
+Let us weep.<br>
+<br>
+--Sir Tim Berners-Lee<br>
+<br>
+RIP Aaron Swartz<br>
+1986 - 2013<br>
+</div>
+<hr>
+<p><small>Made with
+<a href=https://oxal.org/projects/sakura>Sakura</a>,
+powered by <a href=https://mkws.sh>mkws</a>.<br>
+Last modified:
+$(lmt -f '%Y-%m-%dT%H:%M:%SZ' s.css | cut -d' ' -f1)</small></p>
