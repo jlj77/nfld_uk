@@ -1,17 +1,23 @@
 #!/bin/bash
+
 function clean_up {
 	rm -f /var/tmp/bookclub_master_tidy.html
 	rm -f /var/tmp/bookclub_master_parsed.html
 	rm -f /var/tmp/all_urls
 	rm -f /var/tmp/pad_urls
 	rm -f /var/tmp/pad_filenames
-	if [[ -f /var/tmp/tidy_pad ]]; then
-		rm -f /var/tmp/tidy_pad
+	if [[ -f /var/tmp/pre_sakura ]]; then
+		rm -f /var/tmp/pre_sakura
 	fi
+	rm -f /var/tmp/add_sakura
 }
 
 # Do our best to remove our temp files regardless
 trap "clean_up" EXIT SIGQUIT SIGTERM
+
+# Create the lines needed to add Sakura to all of the HTML we generate
+echo "<link rel=stylesheet href='./sakura/css/normalize.css' type='text/css'>" > /var/tmp/add_sakura
+echo "<link rel=stylesheet href='./sakura/css/sakura-vader.css' type='text/css'>" >> /var/tmp/add_sakura
 
 # Get HTML export of the latest 'root' Etherpad for the book club; then
 # 	Save an HTML Tidy'd version for later; and
@@ -47,10 +53,10 @@ for i in "${!PADS[@]}"; do
 	if [[ -f "${FILENAMES[i]}" ]]; then
 		cp "${FILENAMES[i]}" "${ARCHIVE_NAME}"
 	fi
-	curl "${PAD_EXPORT}" | tidy > /var/tmp/tidy_pad
+	curl "${PAD_EXPORT}" | tidy > /var/tmp/pre_sakura
 
 	# Insert Sakura in the header
-	sed '/<head>/r ./add_sakura.txt' /var/tmp/tidy_pad > "${FILENAMES[i]}"
+	sed '/<head>/r /var/tmp/add_sakura' /var/tmp/pre_sakura > "${FILENAMES[i]}"
 done
 
 # Do the same for the HTML export of the 'root' Etherpad

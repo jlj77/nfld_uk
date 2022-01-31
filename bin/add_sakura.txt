@@ -1,2 +1,0 @@
-<link rel=stylesheet href='./sakura/css/normalize.css' type='text/css'>
-<link rel=stylesheet href='./sakura/css/sakura-vader.css' type='text/css'>
