@@ -28,5 +28,10 @@ do
 		"$(basename "${t%.upphtml}".html)"
 done
 
+# Customisations for nfld
+echo "Making rss.xml"
+pp "$share"/rss.uppxml > rss.xml
+# End nfld customisations
+
 echo "Making sitemap.xml"
 pp "$share"/sitemap.uppxml "$1" > sitemap.xml

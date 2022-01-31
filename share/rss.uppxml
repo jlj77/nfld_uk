@@ -1,16 +1,10 @@
 #!/usr/bin/env pp
-<?xml version='1.0' encoding='UTF-8'?>
-<rdf:RDF
-  xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
-  xmlns='http://purl.org/rss/1.0/'
-  xmlns:dc='http://purl.org/dc/elements/1.1/'
->
-
-<channel rdf:about='https://nfld.uk/rss.xml'>
-  <title>Book club @ nfld files</title>
+<?xml version='1.0' ?>
+<rss version="2.0">
+<channel>
+  <title>Book club @ nfld</title>
   <link>https://nfld.uk</link>
-  <description>The latest book club discussions, etc.</description>
-</channel>
+  <description>Book club discussions, etc.</description>
 #!
 d=$(date)
 for f in *.html
@@ -20,23 +14,23 @@ do
     b="$f".old
     if test -f "$b"
     then
-      >&2 printf "Processing %s..." "$f"
+      >&2 printf "Processing %s...\\n" "$f"
       diff=$(wdiff -3 "$f" "$b")
       if test $? == 1
       then
 #!
-      <item rdf:about='https://nfld.uk/$f'>
-      <title><![CDATA[Recent updates to $f]]></title>
+    <item>
+      <title>Recent updates to $f</title>
       <link>https://nfld.uk/$f</link>
-      <dc:date>$d</dc:date>
-      <description><![CDATA[$diff]]></description>
-      </item>
+      <description>$diff</description>
+    </item>
 #!
       fi
     fi
   fi
 done
 #!
-</rdf:RDF>
+</channel>
+</rss>
 #!
->&2 printf "Feed complete."
+>&2 printf "Feed complete.\\n"
