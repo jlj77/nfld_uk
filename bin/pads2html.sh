@@ -5,6 +5,9 @@ function clean_up {
 	rm -f /var/tmp/all_urls
 	rm -f /var/tmp/pad_urls
 	rm -f /var/tmp/pad_filenames
+	if [[ -f /var/tmp/tidy_pad ]]; then
+		rm -f /var/tmp/tidy_pad
+	fi
 }
 
 # Do our best to remove our temp files regardless
@@ -44,7 +47,10 @@ for i in "${!PADS[@]}"; do
 	if [[ -f "${FILENAMES[i]}" ]]; then
 		cp "${FILENAMES[i]}" "${ARCHIVE_NAME}"
 	fi
-	curl "${PAD_EXPORT}" | tidy > "${FILENAMES[i]}"
+	curl "${PAD_EXPORT}" | tidy > /var/tmp/tidy_pad
+
+	# Insert Sakura in the header
+	sed '/<head>/r ./add_sakura.txt' /var/tmp/tidy_pad > "${FILENAMES[i]}"
 done
 
 # Do the same for the HTML export of the 'root' Etherpad
