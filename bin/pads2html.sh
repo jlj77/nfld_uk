@@ -20,9 +20,9 @@ echo "<link rel=stylesheet href='./sakura/css/normalize.css' type='text/css'>" >
 echo "<link rel=stylesheet href='./sakura/css/sakura-vader.css' type='text/css'>" >> /var/tmp/add_sakura
 
 # Get HTML export of the latest 'root' Etherpad for the book club; then
-# 	Save an HTML Tidy'd version for later; and
-# 	Substitute all the Etherpad related URLs such that
-#			pad.nfld.uk/p/padX becomes nfld.uk/padX
+# - Save an HTML Tidy'd version for later; and
+# - Substitute all the Etherpad related URLs such that
+#	  - pad.nfld.uk/p/padX becomes nfld.uk/padX
 curl https://pad.nfld.uk/p/bookclub_master/export/html | \
 	tidy | tee /var/tmp/bookclub_master_tidy.html | \
 	sed -e 's/pad\.nfld\.uk\/p/nfld\.uk/' > /var/tmp/bookclub_master_parsed.html
@@ -37,7 +37,7 @@ awk 'match($0, /\/pad/) { print $2 }' /var/tmp/all_urls > /var/tmp/pad_urls
 mapfile -t PADS < /var/tmp/pad_urls
 
 # Extract the names of the Etherpads; and
-#		Add HTML file extensions to those names
+#	- Add HTML file extensions to those names
 gawk 'match($0, /\/nfld.uk\/([a-zA-Z0-9_]*)/, i) { print i[1]".html" }' /var/tmp/bookclub_master_parsed.html | \
 	uniq > /var/tmp/pad_filenames
 
@@ -45,8 +45,8 @@ gawk 'match($0, /\/nfld.uk\/([a-zA-Z0-9_]*)/, i) { print i[1]".html" }' /var/tmp
 mapfile -t FILENAMES < /var/tmp/pad_filenames
 
 # For each Etherpad in the array of Etherpads:
-#		Copy the corresponding HTML file to a unique .old file; and
-#		Replace that HTML file with the latest, 'tidied' HTML export of said Etherpad
+#	- Copy the corresponding HTML file to a unique .old file; and
+#	- Replace that HTML file with the latest, 'tidied' HTML export of said Etherpad
 for i in "${!PADS[@]}"; do
 	PAD_EXPORT="${PADS[i]}/export/html"
 	ARCHIVE_NAME="${FILENAMES[i]}.old"
@@ -63,4 +63,7 @@ done
 cp bookclub_master.html bookclub_master.html.old
 
 # Do the same substituting of Etherpad names for names with HTML file extensions for the 'root' Etherpad
-awk '{gsub(/\/nfld.uk\/[a-zA-Z0-9_]*/, "&.html")}1' /var/tmp/bookclub_master_parsed.html > ./bookclub_master.html
+awk '{gsub(/\/nfld.uk\/[a-zA-Z0-9_]*/, "&.html")}1' /var/tmp/bookclub_master_parsed.html > /var/tmp/pre_sakura
+
+# Insert Sakura in the HTML export of the 'root' Etherpad
+sed '/<head>/r /var/tmp/add_sakura' /var/tmp/pre_sakura > ./bookclub_master.html
