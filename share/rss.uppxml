@@ -9,32 +9,32 @@
 <channel rdf:about='https://nfld.uk/rss.xml'>
   <title>Book club @ nfld files</title>
   <link>https://nfld.uk</link>
-  <description>The latest book club discussions, nominations, etc.</description>
+  <description>The latest book club discussions, etc.</description>
 </channel>
 #!
 d=$(date)
 for f in *.html
 do
-if test -f "$f"
-then
-b="$f".old
-if test -f "$b"
-then
->&2 printf "Processing %s..." "$f"
-diff=$(wdiff -3 "$f" "$b")
-if test $? == 1
-then
+  if test -f "$f"
+  then
+    b="$f".old
+    if test -f "$b"
+    then
+      >&2 printf "Processing %s..." "$f"
+      diff=$(wdiff -3 "$f" "$b")
+      if test $? == 1
+      then
 #!
-<item rdf:about='https://nfld.uk/$f'>
-<title><![CDATA[Recent updates to $f]]></title>
-<link>https://nfld.uk/$f</link>
-<dc:date>$d</dc:date>
-<description><![CDATA[$diff]]></description>
-</item>
+      <item rdf:about='https://nfld.uk/$f'>
+      <title><![CDATA[Recent updates to $f]]></title>
+      <link>https://nfld.uk/$f</link>
+      <dc:date>$d</dc:date>
+      <description><![CDATA[$diff]]></description>
+      </item>
 #!
-        fi
+      fi
     fi
-fi
+  fi
 done
 #!
 </rdf:RDF>
