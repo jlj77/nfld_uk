@@ -15,8 +15,6 @@ do
   diff=$(wdiff -3 "$f" "$b")
   if ! test -z "$diff"
   then
-  if test -f "$f"
-  then
 #!
  <item>
   <title>Recent updates to $f</title>
