@@ -1,28 +1,29 @@
 #!/usr/bin/env pp
 <?xml version='1.0' ?>
-<rss version="2.0">
+<rss version='2.0'>
 <channel>
-  <title>Book club @ nfld</title>
-  <link>https://nfld.uk</link>
-  <description>Book club discussions, etc.</description>
+ <title>Book club @ nfld</title>
+ <link>https://nfld.uk</link>
+ <description>Book club discussions, etc.</description>
 #!
 for f in *.html
 do
+  test -f "$f" || continue
+  b="$f".old
+  test -f "$b" || continue
+  >&2 printf "Processing %s...\\n" "$f"
+  diff=$(wdiff -3 "$f" "$b")
+  if ! test -z "$diff"
+  then
   if test -f "$f"
   then
-    b="$f".old
-    >&2 printf "Processing %s...\\n" "$f"
-    diff=$(wdiff -3 "$f" "$b")
-    if ! test -z "$diff"
-    then
 #!
-    <item>
-      <title>Recent updates to $f</title>
-      <link>https://nfld.uk/$f</link>
-      <description>$diff</description>
-    </item>
+ <item>
+  <title>Recent updates to $f</title>
+  <link>https://nfld.uk/$f</link>
+  <description>$diff</description>
+ </item>
 #!
-    fi
   fi
 done
 #!
