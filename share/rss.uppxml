@@ -6,6 +6,8 @@
  <link>https://nfld.uk</link>
  <description>Book club discussions, etc.</description>
 #!
+s="
+======================================================================"
 for f in *.html
 do
   test -f "$f" || continue
@@ -13,7 +15,7 @@ do
   test -f "$b" || continue
   >&2 printf "Processing %s...\\n" "$f"
   diff=$(wdiff -3 "$f" "$b")
-  if ! test -z "$diff"
+  if [ "$diff" != "$s" ];
   then
 #!
  <item>
