@@ -53,6 +53,7 @@ for i in "${!PADS[@]}"; do
 	if [[ -f "${FILENAMES[i]}" ]]; then
 		cp "${FILENAMES[i]}" "${ARCHIVE_NAME}"
 	fi
+        sleep 1m
 	curl "${PAD_EXPORT}" | tidy > /var/tmp/pre_sakura
 
 	# Insert Sakura in the header
